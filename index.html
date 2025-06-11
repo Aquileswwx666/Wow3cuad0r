@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>WoW Ecuador</title>
+    <style>
+        /* ESTILOS GENERALES */
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: gold;
+            background: url('https://i.imgur.com/JXQ2z9a.jpg') no-repeat center center fixed;
+            background-size: cover;
+            background-attachment: fixed;
+            text-shadow: 2px 2px 4px #000;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* CABECERA */
+        header {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.3));
+            text-align: center;
+            padding: 20px 10px;
+            border-bottom: 3px solid #8B4513;
+            width: 100%;
+        }
+        h1 {
+            font-size: clamp(1.8rem, 6vw, 3rem);
+            margin: 0;
+            color: #FFD700;
+            text-transform: uppercase;
+            word-wrap: break-word;
+            padding: 0 10px;
+        }
+
+        /* BARRA DE NAVEGACIÓN */
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            background: rgba(0, 20, 40, 0.8);
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 15px;
+            margin: 5px;
+            border: 1px solid #8B4513;
+            border-radius: 5px;
+            transition: all 0.3s;
+            font-size: clamp(0.9rem, 3vw, 1.1rem);
+            white-space: nowrap;
+        }
+        nav a:hover {
+            background: #8B4513;
+            transform: scale(1.05);
+        }
+
+        /* CONTENIDO */
+        .contenido {
+            background: rgba(0, 10, 20, 0.85);
+            margin: 20px auto;
+            padding: 20px;
+            width: 95%;
+            max-width: 1200px;
+            border-radius: 10px;
+            border: 2px solid #8B4513;
+            flex: 1;
+        }
+
+        /* BOTONES */
+        button {
+            background: #8B4513;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: clamp(1rem, 4vw, 1.1rem);
+            margin: 5px;
+            transition: all 0.3s;
+        }
+        button:hover {
+            background: #A0522D;
+            transform: scale(1.05);
+        }
+
+        /* FORMULARIOS */
+        .form-group {
+            margin-bottom: 15px;
+            position: relative;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            font-size: 1rem;
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid #8B4513;
+        }
+        .username-status {
+            position: absolute;
+            right: 10px;
+            top: 38px;
+            font-size: 1.2em;
+            display: none;
+        }
+        .valid {
+            color: #2ecc71;
+        }
+        .invalid {
+            color: #e74c3c;
+        }
+
+        /* CAPTCHA */
+        .captcha-box {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 15px;
+            margin: 15px 0;
+            text-align: center;
+            border-radius: 5px;
+        }
+        .captcha-result {
+            margin-top: 10px;
+            min-height: 50px;
+        }
+        .captcha-result img {
+            max-width: 50px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* EXPANSIONES */
+        .expansion {
+            background: rgba(0, 20, 40, 0.7);
+            padding: 15px;
+            margin: 15px 0;
+            border-left: 3px solid #8B4513;
+        }
+
+        /* MEDIA QUERIES PARA PC */
+        @media (min-width: 768px) {
+            nav a {
+                padding: 10px 25px;
+                margin: 0 10px;
+            }
+            .contenido {
+                padding: 25px;
+                width: 85%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- CABECERA -->
+    <header>
+        <h1>Bienvenido a WoWEcuador</h1>
+    </header>
+
+    <!-- BARRA DE NAVEGACIÓN -->
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#descargar">Descargar</a>
+        <a href="#registro">Registro</a>
+        <a href="#login">Iniciar Sesión</a>
+        <a href="#comentarios">Comentarios</a>
+    </nav>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <div class="contenido">
+        <!-- SECCIÓN INICIO -->
+        <section id="inicio">
+            <h2>¡Bienvenidos a WoW Ecuador!</h2>
+            <p>La comunidad ecuatoriana de World of Warcraft más activa</p>
+            
+            <div class="expansion">
+                <h3>Historia de World of Warcraft</h3>
+                <p><strong>Lanzamiento inicial:</strong> 23 de noviembre de 2004</p>
+                <p><strong>Desarrollador:</strong> Blizzard Entertainment</p>
+                
+                <h4>Expansiones principales:</h4>
+                <ul>
+                    <li>The Burning Crusade (2007)</li>
+                    <li>Wrath of the Lich King (2008)</li>
+                    <li>Cataclysm (2010)</li>
+                    <li>Mists of Pandaria (2012)</li>
+                    <li>Warlords of Draenor (2014)</li>
+                    <li>Legion (2016)</li>
+                    <li>Battle for Azeroth (2018)</li>
+                    <li>Shadowlands (2020)</li>
+                    <li>Dragonflight (2022)</li>
+                </ul>
+                
+                <h4>Versiones disponibles:</h4>
+                <ul>
+                    <li><strong>WoW Classic:</strong> La experiencia original</li>
+                    <li><strong>WoW Retail:</strong> La versión actual con todas las expansiones</li>
+                    <li><strong>Wrath of the Lich King Classic:</strong> La expansión clásica más popular</li>
+                </ul>
+            </div>
+            
+            <div id="comentarios-inicio">
+                <h3>Comentarios de Jugadores</h3>
+                <div class="comentario">
+                    <p><strong>GarroshEcu:</strong> ¡La mejor comunidad para jugar WoW en Ecuador!</p>
+                </div>
+                <form>
+                    <input type="text" placeholder="Tu nombre" required>
+                    <textarea placeholder="Tu comentario" rows="4" required></textarea>
+                    <button type="submit">Publicar</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- SECCIÓN DESCARGAR -->
+        <section id="descargar" style="display:none;">
+            <h2>Descarga World of Warcraft</h2>
+            <p>Versión completa para Windows y Mac</p>
+            <button onclick="alert('Descarga iniciada (simulación)')">Descargar Ahora</button>
+            <p>Tamaño: 80GB | Requisitos: Windows 10/11, macOS 10.15+</p>
+        </section>
+
+        <!-- SECCIÓN REGISTRO -->
+        <section id="registro" style="display:none;">
+            <h2>Regístrate en WoW Ecuador</h2>
+            <form id="register-form">
+                <div class="form-group">
+                    <label for="username">Nombre de usuario:</label>
+                    <input type="text" id="username" placeholder="Elige un nombre de usuario" required oninput="checkUsername()">
+                    <span id="username-status" class="username-status">✓</span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" placeholder="tucorreo@ejemplo.com" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Contraseña:</label>
+                    <input type="password" id="password" placeholder="Crea una contraseña" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="confirm-password">Confirmar contraseña:</label>
+                    <input type="password" id="confirm-password" placeholder="Repite tu contraseña" required>
+                </div>
+                
+                <div class="captcha-box">
+                    <p id="captcha-question">CAPTCHA: ¿Cuánto es 2 + 6?</p>
+                    <input type="number" id="captcha-answer" placeholder="Respuesta" required>
+                    <button type="button" onclick="generateCaptcha()">Cambiar Operación</button>
+                    <div class="captcha-result" id="captcha-result"></div>
+                </div>
+                
+                <button type="button" onclick="validateRegister()">Crear Cuenta</button>
+            </form>
+        </section>
+
+        <!-- SECCIÓN INICIAR SESIÓN -->
+        <section id="login" style="display:none;">
+            <h2>Iniciar Sesión</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="login-username">Usuario o Correo:</label>
+                    <input type="text" id="login-username" placeholder="Tu usuario o correo" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="login-password">Contraseña:</label>
+                    <input type="password" id="login-password" placeholder="Tu contraseña" required>
+                </div>
+                
+                <div class="captcha-box">
+                    <p id="login-captcha">CAPTCHA: ¿Cuánto es 10 - 3?</p>
+                    <input type="number" id="login-captcha-answer" placeholder="Respuesta" required>
+                    <button type="button" onclick="generateLoginCaptcha()">Cambiar Operación</button>
+                    <div class="captcha-result" id="login-captcha-result"></div>
+                </div>
+                
+                <button type="button" onclick="validateLogin()">Ingresar</button>
+            </form>
+        </section>
+
+        <!-- SECCIÓN COMENTARIOS -->
+        <section id="comentarios" style="display:none;">
+            <h2>Comentarios de Jugadores</h2>
+            <div class="comentario">
+                <p><strong>ThrallEcu:</strong> ¡La mejor comunidad de WoW en Latinoamérica!</p>
+            </div>
+            <div class="comentario">
+                <p><strong>JainaProud:</strong> Excelente servicio, jugabilidad perfecta.</p>
+            </div>
+            
+            <h3>Agrega tu comentario</h3>
+            <form>
+                <input type="text" placeholder="Tu nombre" required>
+                <textarea placeholder="Tu comentario" rows="4" required></textarea>
+                <button type="submit">Publicar</button>
+            </form>
+        </section>
+    </div>
+
+    <footer style="background: rgba(0,0,0,0.7); text-align: center; padding: 15px; width: 100%;">
+        <p>© 2023 WoW Ecuador - Todos los derechos reservados</p>
+        <p>Esta es una página de fans. No afiliada a Blizzard Entertainment.</p>
+    </footer>
+
+    <script>
+        // Variables para los CAPTCHAs
+        let captchaValue, loginCaptchaValue;
+        
+        // Base de datos simulada
+        const registeredUsers = ['Thrall', 'Arthas', 'Jaina', 'Sylvanas'];
+        
+        // Mostrar sección según hash
+        function showSection() {
+            const sections = ['inicio', 'descargar', 'registro', 'login', 'comentarios'];
+            const hash = window.location.hash.substring(1) || 'inicio';
+            
+            sections.forEach(section => {
+                document.getElementById(section).style.display = 
+                    section === hash ? 'block' : 'none';
+            });
+        }
+        
+        // Navegación
+        window.onload = function() {
+            showSection();
+            generateCaptcha();
+            generateLoginCaptcha();
+        };
+        window.onhashchange = showSection;
+        
+        // Generador de CAPTCHA para registro
+        function generateCaptcha() {
+            const num1 = Math.floor(Math.random() * 10) + 1;
+            const num2 = Math.floor(Math.random() * 10) + 1;
+            const operators = ['+', '-', '*'];
+            const operator = operators[Math.floor(Math.random() * operators.length)];
+            
+            document.getElementById('captcha-question').textContent = 
+                `CAPTCHA: ¿Cuánto es ${num1} ${operator} ${num2}?`;
+            
+            // Calcular respuesta correcta
+            switch(operator) {
+                case '+': captchaValue = num1 + num2; break;
+                case '-': captchaValue = num1 - num2; break;
+                case '*': captchaValue = num1 * num2; break;
+            }
+        }
+        
+        // Generador de CAPTCHA para login
+        function generateLoginCaptcha() {
+            const num1 = Math.floor(Math.random() * 10) + 1;
+            const num2 = Math.floor(Math.random() * 10) + 1;
+            const operators = ['+', '-', '*'];
+            const operator = operators[Math.floor(Math.random() * operators.length)];
+            
+            document.getElementById('login-captcha').textContent = 
+                `CAPTCHA: ¿Cuánto es ${num1} ${operator} ${num2}?`;
+            
+            // Calcular respuesta correcta
+            switch(operator) {
+                case '+': loginCaptchaValue = num1 + num2; break;
+                case '-': loginCaptchaValue = num1 - num2; break;
+                case '*': loginCaptchaValue = num1 * num2; break;
+            }
+        }
+        
+        // Verificar disponibilidad de nombre de usuario
+        function checkUsername() {
+            const username = document.getElementById('username').value;
+            const status = document.getElementById('username-status');
+            
+            if(username.length < 3) {
+                status.style.display = 'none';
+                return;
+            }
+            
+            if(registeredUsers.includes(username)) {
+                status.textContent = '✗';
+                status.className = 'username-status invalid';
+                status.style.display = 'inline';
+            } else {
+                status.textContent = '✓';
+                status.className = 'username-status valid';
+                status.style.display = 'inline';
+            }
+        }
+        
+        // Validar formato de email
+        function validateEmail(email) {
+            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return re.test(email);
+        }
+        
+        // Validar registro
+        function validateRegister() {
+            const username = document.getElementById('username').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirm-password').value;
+            const answer = parseInt(document.getElementById('captcha-answer').value);
+            const resultDiv = document.getElementById('captcha-result');
+            
+            // Validaciones
+            if(registeredUsers.includes(username)) {
+                alert('Error: Este nombre de usuario ya está registrado');
+                return;
+            }
+            
+            if(!validateEmail(email)) {
+                alert('Error: Formato de correo electrónico inválido (debe contener @ y dominio)');
+                return;
+            }
+            
+            if(password !== confirmPassword) {
+                alert('Error: Las contraseñas no coinciden');
+                return;
+            }
+            
+            if(password.length < 6) {
+                alert('Error: La contraseña debe tener al menos 6 caracteres');
+                return;
+            }
+            
+            if(isNaN(answer) || answer !== captchaValue) {
+                resultDiv.innerHTML = '<img src="https://cdn.pixabay.com/photo/2020/09/03/12/11/emoji-5541256_640.png" alt="Incorrecto">';
+                alert('CAPTCHA incorrecto');
+                return;
+            }
+            
+            // Registro exitoso
+            resultDiv.innerHTML = '<img src="https://cdn.pixabay.com/photo/2016/04/01/10/04/amusing-1300046_640.png" alt="Correcto">';
+            registeredUsers.push(username);
+            alert('¡Bienvenido a WoW Ecuador, ' + username + '! Tu registro fue exitoso.');
+            document.getElementById('register-form').reset();
+            generateCaptcha();
+        }
+        
+        // Validar login
+        function validateLogin() {
+            const answer = parseInt(document.getElementById('login-captcha-answer').value);
+            const resultDiv = document.getElementById('login-captcha-result');
+            
+            if(isNaN(answer) || answer !== loginCaptchaValue) {
+                resultDiv.innerHTML = '<img src="https://cdn.pixabay.com/photo/2020/09/03/12/11/emoji-5541256_640.png" alt="Incorrecto">';
+                alert('CAPTCHA incorrecto');
+                return;
+            }
+            
+            // Login exitoso (simulación)
+            resultDiv.innerHTML = '<img src="https://cdn.pixabay.com/photo/2016/04/01/10/04/amusing-1300046_640.png" alt="Correcto">';
+            alert('Inicio de sesión exitoso. ¡Bienvenido de nuevo!');
+            document.getElementById('login-form').reset();
+            generateLoginCaptcha();
+        }
+    </script>
+</body>
+</html>
